@@ -1,21 +1,21 @@
 
 /* core style changes needed for a semi-decent RTL experience */
-html[lang^=ar] .formSection,
-html[lang^=ar] .selectionBoxRow
+.formSection,
+.selectionBoxRow
 {
     direction: rtl;
 }
 
 
-html[lang^=ar] #selectionBox {
+#selectionBox {
     float: left;
     padding-right: 20px;
 }
 
 /* this selector works on chrome only, but didn't want a more intrusive selector that could affect other apps */ 
-/* html[lang^=ar] .page:has(.formSection) {
+.page:has(.formSection) {
     direction: rtl;
-} */
+}
 
 /* end core style changes */
 
@@ -23,7 +23,7 @@ html[lang^=ar] #selectionBox {
     these are styles from the data entry app (https://github.com/dhis2/dhis2-core/blob/master/dhis-2/dhis-web/dhis-web-dataentry/src/main/webapp/dhis-web-dataentry/style/dhis-web-dataentry.css)
     converted using https://rtlcss.com/playground/#
 */
-html[lang^=ar] #currentSelection
+#currentSelection
 {
   padding: 6px;
   background-color: #eee;
@@ -38,26 +38,26 @@ html[lang^=ar] #currentSelection
   z-index: 5;
 }
 
-html[lang^=ar] #actions
+#actions
 {
   float: left;
   width: 160px;
   text-align: left;
 }
 
-html[lang^=ar] #closeCurrentSelection
+#closeCurrentSelection
 {
   float:right;
   cursor:pointer;
   margin-left:5px;
 }
 
-html[lang^=ar] .currentRow
+.currentRow
 {
   padding-left: 50px;
 }
 
-html[lang^=ar] .formSection td
+.formSection td
 {
   padding-left: 1px;
   padding-right: 1px;
@@ -65,12 +65,12 @@ html[lang^=ar] .formSection td
   white-space: nowrap;
 }
 
-html[lang^=ar] .entryarea
+.entryarea
 {
   text-align: right;
 }
 
-html[lang^=ar] .commentlink
+.commentlink
 {
   padding-right: 3px;
 }
@@ -78,30 +78,30 @@ html[lang^=ar] .commentlink
 
 /* History audit table */
 
-html[lang^=ar] #historyAuditTable
+#historyAuditTable
 {
     text-align: right;
 }
 
 
-html[lang^=ar] #historyAuditTable td, #historyAuditTable th
+#historyAuditTable td, #historyAuditTable th
 {
     padding-right: 10px;
 }
 
 
-html[lang^=ar] #historyTabs-chart
+#historyTabs-chart
 {
     padding-right: 0;
 }
 
-html[lang^=ar] .upload-progress-info
+.upload-progress-info
 {
     right: 45%;
 }
 
 
-html[lang^=ar] .upload-fileinfo-size
+.upload-fileinfo-size
 {
     float: left;
     text-align: left;
@@ -110,7 +110,7 @@ html[lang^=ar] .upload-fileinfo-size
     text-overflow: ellipsis;
 }
 
-html[lang^=ar] .upload-button
+.upload-button
 {
     margin: 1px 4px 2px 2px;
     height: 100%;
@@ -118,18 +118,18 @@ html[lang^=ar] .upload-button
 
 /* FA icons for jQuery UI icon hack */
 /* todo: check in UI */
-/* html[lang^=ar] .ui-icon[class*=" fa-"] {
+/* .ui-icon[class*=" fa-"] {
     background: none repeat scroll 100% 0 transparent;
     text-indent: 0;
     margin-top: -0.5em;
 }
 
-html[lang^=ar] .ui-button-icon-only .ui-icon[class*=" fa-"] {
+.ui-button-icon-only .ui-icon[class*=" fa-"] {
     margin-right: -7px;
 } */
 
 
-html[lang^=ar] #fileDeleteConfirmationDialog .fa
+#fileDeleteConfirmationDialog .fa
 {
     margin-left: 5px;
 }
