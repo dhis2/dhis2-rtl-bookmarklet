@@ -4,15 +4,19 @@ These are some notes / instructions to improve the support for Right To Left for
 
 1. Locally on your machine, create a file named style.css and add this CSS snippet to it
 
+```css
 .formSection {
   direction: rtl !important;
 }
+```
 
 or alternatively download [style.css](./style.css) from this repo which fixes many of 
 
 2. Open a terminal, and navigate to where the style.css file is located. Then Run the curl command described in this documentation link. In your case, the command will be:
 
+```bash
 curl --data-binary @style.css "https://url_to_dhis_2_instance/api/files/style"  -H "Content-Type:text/css" -u user:password
+```
 
 3. In the browser, go to https://url_to_dhis_2_instance/api/files/style and you should be able to see the CSS file you uploaded.
 
