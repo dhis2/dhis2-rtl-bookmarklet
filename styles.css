@@ -1,0 +1,135 @@
+
+/* core style changes needed for a semi-decent RTL experience */
+html[lang^=ar] .formSection,
+html[lang^=ar] .selectionBoxRow
+{
+    direction: rtl;
+}
+
+
+html[lang^=ar] #selectionBox {
+    float: left;
+    padding-right: 20px;
+}
+
+/* this selector works on chrome only, but didn't want a more intrusive selector that could affect other apps */ 
+html[lang^=ar] :has(.formSection) {
+    direction: rtl;
+}
+
+/* end core style changes */
+
+/*
+    these are styles from the data entry app (https://github.com/dhis2/dhis2-core/blob/master/dhis-2/dhis-web/dhis-web-dataentry/src/main/webapp/dhis-web-dataentry/style/dhis-web-dataentry.css)
+    converted using https://rtlcss.com/playground/#
+*/
+html[lang^=ar] #currentSelection
+{
+  padding: 6px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  text-align: left;
+  position: fixed;
+  top: 55px;
+  right: 10px; /* leaving this as right otherwise the parent needs to be rtl or the selection spans whole width*/
+  filter: alpha(opacity=85);
+  opacity: 0.85;
+  border-radius: 3px;
+  z-index: 5;
+}
+
+html[lang^=ar] #actions
+{
+  float: left;
+  width: 160px;
+  text-align: left;
+}
+
+html[lang^=ar] #closeCurrentSelection
+{
+  float:right;
+  cursor:pointer;
+  margin-left:5px;
+}
+
+html[lang^=ar] .currentRow
+{
+  padding-left: 50px;
+}
+
+html[lang^=ar] .formSection td
+{
+  padding-left: 1px;
+  padding-right: 1px;
+  height: 28px;
+  white-space: nowrap;
+}
+
+html[lang^=ar] .entryarea
+{
+  text-align: right;
+}
+
+html[lang^=ar] .commentlink
+{
+  padding-right: 3px;
+}
+
+
+/* History audit table */
+
+html[lang^=ar] #historyAuditTable
+{
+    text-align: right;
+}
+
+
+html[lang^=ar] #historyAuditTable td, #historyAuditTable th
+{
+    padding-right: 10px;
+}
+
+
+html[lang^=ar] #historyTabs-chart
+{
+    padding-right: 0;
+}
+
+html[lang^=ar] .upload-progress-info
+{
+    right: 45%;
+}
+
+
+html[lang^=ar] .upload-fileinfo-size
+{
+    float: left;
+    text-align: left;
+    padding-right: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+html[lang^=ar] .upload-button
+{
+    margin: 1px 4px 2px 2px;
+    height: 100%;
+}
+
+/* FA icons for jQuery UI icon hack */
+/* todo: check in UI */
+/* html[lang^=ar] .ui-icon[class*=" fa-"] {
+    background: none repeat scroll 100% 0 transparent;
+    text-indent: 0;
+    margin-top: -0.5em;
+}
+
+html[lang^=ar] .ui-button-icon-only .ui-icon[class*=" fa-"] {
+    margin-right: -7px;
+} */
+
+
+html[lang^=ar] #fileDeleteConfirmationDialog .fa
+{
+    margin-left: 5px;
+}
