@@ -13,9 +13,9 @@ html[lang^=ar] #selectionBox {
 }
 
 /* this selector works on chrome only, but didn't want a more intrusive selector that could affect other apps */ 
-html[lang^=ar] :has(.formSection) {
+/* html[lang^=ar] .page:has(.formSection) {
     direction: rtl;
-}
+} */
 
 /* end core style changes */
 
