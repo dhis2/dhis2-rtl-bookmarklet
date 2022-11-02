@@ -18,6 +18,6 @@ or alternatively download [style.css](./style.css) from this repo which fixes ma
 curl --data-binary @style.css "https://url_to_dhis_2_instance/api/files/style"  -H "Content-Type:text/css" -u user:password
 ```
 
-3. In the browser, go to https://url_to_dhis_2_instance/api/files/style and you should be able to see the CSS file you uploaded.
+3. In the browser, go to `https://url_to_dhis_2_instance/api/files/style` and you should be able to see the CSS file you uploaded.
 
 4. Then go to a form, and do a hard refresh ("Empty cache and hard reload"  in Chrome), and the forms should then display right-to-left, with the styles applied to it. It's important to do a hard refresh, as otherwise the previous CSS will be cached and served instead.
