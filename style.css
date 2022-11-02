@@ -8,7 +8,7 @@
 
 
 #selectionBox {
-    float: left;
+    float: right;
     padding-right: 20px;
 }
 
@@ -25,17 +25,18 @@
 */
 #currentSelection
 {
-  padding: 6px;
-  background-color: #eee;
-  border: 1px solid #bbb;
-  text-align: left;
-  position: fixed;
-  top: 55px;
-  right: 10px; /* leaving this as right otherwise the parent needs to be rtl or the selection spans whole width*/
-  filter: alpha(opacity=85);
-  opacity: 0.85;
-  border-radius: 3px;
-  z-index: 5;
+    padding: 6px;
+    background-color: #eee;
+    border: 1px solid #bbb;
+    text-align: left;
+    position: fixed;
+    top: 55px;
+    left: 20%;
+    filter: alpha(opacity=85);
+    opacity: 0.85;
+    border-radius: 3px;
+    z-index: 5;
+    width: 400px; /* this is different from what LTR does but it's a work around for the fact that this component doesn't have a parent and if we change it to be on the right, then it takes the whole screen width */
 }
 
 #actions
