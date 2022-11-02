@@ -21,7 +21,7 @@ curl -s https://kabaros.github.io/dhis2-rtl/style.css | curl --data-binary @- "h
 
 If you prefer to not use the syles in this repo, and upload your own CSS fixes for RTL, then follow the steps below:
 
-1. Locally on your machine, create a file named style.css and add this CSS snippet to it
+1. Locally on your machine, create a file named `style.css` and add - as an example - this CSS snippet to it:
 
 ```css
 .formSection {
