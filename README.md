@@ -19,6 +19,7 @@ curl -s https://kabaros.github.io/dhis2-rtl/style.css | curl --data-binary @- "h
 
 ## Add Your own styles
 
+If you prefer to not use the syles in this repo, and upload your own CSS fixes for RTL, then follow the steps below:
 
 1. Locally on your machine, create a file named style.css and add this CSS snippet to it
 
@@ -28,7 +29,7 @@ curl -s https://kabaros.github.io/dhis2-rtl/style.css | curl --data-binary @- "h
 }
 ```
 
-or alternatively download [style.css](./style.css) from this repo which fixes many of the rtl issues
+or alternatively download [style.css](./style.css) from this repo which fixes many of the rtl issues, and change/add as you see fit.
 
 2. Open a terminal, and navigate to where the style.css file is located. Then Run the curl command described in this documentation link. In your case, the command will be:
 
