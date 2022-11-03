@@ -13,7 +13,7 @@ These are instructions on how to improve the support for Right To Left for DHIS2
 
 ### Bookmarklet
 
-To install the bookmarklet, go to https://kabaros.github.io/dhis2-rtl/ then drag the link to your Bookmarks Bar. Then you can go to your DHIS2 instance, and click on the bookmarkelt. This will apply the RTL fixes, but the changes will be lost when you refresh.
+To install the bookmarklet, go to https://dhis2.github.io/dhis2-rtl-bookmarklet/ then drag the link to your Bookmarks Bar. Then you can go to your DHIS2 instance, and click on the bookmarkelt. This will apply the RTL fixes, but the changes will be lost when you refresh.
 
 https://user-images.githubusercontent.com/1014725/199567071-2255240e-0c94-41ac-be3b-9020e1f42be3.mov
 
@@ -21,7 +21,7 @@ If you are happy with the styles and want to apply them to your DHIS2 instance f
 
 
 ```bash
-curl -s https://kabaros.github.io/dhis2-rtl/style.css | curl --data-binary @- "https://url_to_dhis_2_instance/api/files/style"  -H "Content-Type:text/css" -u user:password
+curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl --data-binary @- "https://url_to_dhis_2_instance/api/files/style"  -H "Content-Type:text/css" -u user:password
 ```
 
 ## Add Your own styles

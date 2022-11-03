@@ -1,25 +1,250 @@
 <head>
   <title>DHIS2 RTL Bookmarklet</title>
-</head>
-<div style="text-align: center;flex-direction: column;gap: 20px;display: flex;margin-top: 100px;">
+  <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="icons/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="icons/favicon-16x16.png"
+  />
+  <style>
+    @font-face {
+      font-family: "Noto";
+      src: url("fonts/NotoSansArabic-Regular.ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "Noto";
+      src: url("fonts/NotoSansArabic-Bold.ttf");
+      font-weight: bold;
+      font-style: normal;
+    }
 
+    body {
+      font-size: 14px;
+      max-width: 1020px;
+      line-height: 1.4em;
+      margin: 0 auto;
+      font-family: Noto, Arial, Helvetica, sans-serif;
+      font-display: swap;
+    }
+    h1 {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    .button {
+      background-color: #017fd4;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    .instructions {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .instructions > div {
+      flex-direction: column;
+      width: 45%;
+    }
+    @media only screen and (max-device-width: 600px) {
+      .instructions > div {
+        width: 100%;
+      }
+    }
+    .instructions .arabic {
+      direction: rtl;
+    }
+    code {
+      line-break: anywhere;
+    }
+  </style>
+</head>
+<body style="text-align: center; gap: 20px; margin-top: 100px">
   <div>
-    <a href="javascript:(function(){document.head.insertAdjacentHTML('beforeend','<link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://kabaros.github.io/dhis2-rtl/style.css&quot;>');})();">DHIS2 RTL</a>
+    <a
+      class="button"
+      href='javascript:(function(){document.head.insertAdjacentHTML(&apos;beforeend&apos;,&apos;<link rel="stylesheet" type="text/css" href="https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css">&apos;);})();'
+      >DHIS2 RTL</a
+    >
+  </div>
+  <div><small>drag me ☝🏿 to your bookmarks bar</small></div>
+
+  <div class="instructions">
+    <div class="english">
+      <div>
+        <h1>What is this?</h1>
+        <p>
+          This is a bookmarklet to improve support for right-to-left languages
+          in DHIS2.
+        </p>
+        <small
+          >(check the <a href="#walkthrough">video below</a> for a quick
+          walkthrough on how to use it)</small
+        >
+      </div>
+      <div>
+        <h1>What is a bookmarlet?</h1>
+        <p>
+          A bookmarklet is a small software application stored as a bookmark in
+          a web browser, which typically allows a user to interact with the
+          currently loaded web page in some way.
+        </p>
+        <p>
+          This bookmarklet applies CSS styles that fix some common right-to-left
+          layout and style issues with DHIS2 in general, and the Data Entry app
+          specifically. For example, it changes the layout of forms to be from
+          right-to-left which is more inline with the expectations of users of
+          RTL languages, and reflects better the paper forms in these languages.
+        </p>
+        <p>
+          The bookmarklet is a temporary solution as we work on supporting
+          right-to-left languages natively in DHIS2 core without the need for
+          any addons.
+        </p>
+      </div>
+      <div>
+        <h1>To install the bookmarklet</h1>
+        <ol style="list-style-position: inside">
+          <li>Drag the button at the top of this page to your bookmarks bar</li>
+          <li>Go to your DHIS2 instance -&gt; Data Entry App</li>
+          <li>Click the bookmarklet on your bookmarks</li>
+          <li>The RTL style should be applied!</li>
+        </ol>
+      </div>
+      <div>
+        <h1>Install the styles permanently on a DHIS2 instance</h1>
+        <p>
+          The fixes applied will be lost when you refresh the page. But if you
+          are happy with the styles and want to apply them to your DHIS2
+          instance permanently, then you can run the following command:
+        </p>
+
+        <code>
+          curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl
+          --data-binary @- "https://url_to_dhis_2_instance/api/files/style" -H
+          "Content-Type:text/css" -u user:password
+        </code>
+
+        <p>
+          For more information, check the
+          <a href="https://github.com/dhis2/dhis2-rtl-bookmarklet">README</a>
+          for this project.
+        </p>
+      </div>
+      <div>
+        <h1>Contributing and Getting in touch</h1>
+
+        <p>
+          If you encounter an issue with right-to-left layout, and have a fix
+          that can be applied globally, then please contribute to the stylesheet
+          by opening a PR to
+          <a href="https://github.com/dhis2/dhis2-rtl-bookmarklet">the repo</a
+          >.You can also get in touch with our team by opening an issue or
+          starting a discussion on GitHub.
+        </p>
+      </div>
+    </div>
+    <div class="arabic">
+      <div>
+        <h1>ما هذا؟</h1>
+        <p>
+          هذه bookmarklet تساعد على تحسين نسق وتصميم تطبيقات DHIS2 للغات التي
+          تُكتب من اليمين لليسار كاللغة العربية.
+        </p>
+        <small
+          >(شاهد <a href="#walkthrough">الفيديو</a> أدناه لشرح سريع لكيفية
+          الاستخدام)</small
+        >
+      </div>
+      <div>
+        <h1>ما معنى bookmarklet؟</h1>
+        <p>
+          الـbookmarklet هي تقنية في المتصفحات الحديثة تسمح بالقيام بتغييرات
+          بسيطة على صفحة من حيث التصميم أو السلوك بدون تغيير الصفحة الأصلية.
+        </p>
+        <p>
+          تقوم هذه الـbookmarklet بتفعيل تغييرات على تصميم ونسق الصفحة (الـCSS)
+          لجعلها أكثر ملاءمة للغة العربية. على سبيل المثال، عند تفعيل التغييرات،
+          ستلاحظ أن عناوين الصفوف في مختلف الاستمارات على اليمين وليست على
+          اليسار كما هو الحال عادة في DHIS2. هذه التغييرات البسيطة تجعل التطبيق
+          عامة واستمارات ادخال البيانات خصوصا متناسقة مع توقعات المستخدم العربي
+          وأقرب شكلا وتصميما للاستمارات الورقية.
+        </p>
+        <p>
+          الـbookmarklet هي حل مؤقت حتى يتم تحديث تطبيق DHIS2 الأصلي لدعم اللغة
+          العربية بشكل أفضل بدون أي اضافات، وهو أمر يقوم فريقنا بالعمل على
+          تحسينه في الاصدارات القادمة.
+        </p>
+      </div>
+      <div>
+        <h1>لتثبيت الـbookmarklet</h1>
+        <ol style="list-style-position: inside">
+          <li>اسحب الرابط أعلى الصفحة إلى قائمة المفضلة</li>
+          <li>اذهب الى DHIS2 ثم برنامج ادخال البيانات</li>
+          <li>اضغط على الـbookmarklet</li>
+          <li>سيتم تفعيل التغييرات على الصفحة</li>
+        </ol>
+      </div>
+      <div>
+        <h1>لتثبيت التغييرات بشكل دائم على DHIS2</h1>
+        <p>
+          عند تفعيل الـbookmarklet، يمكنكم مشاهدة التغييرات مباشرة على الصفحة
+          لكن هذه التغييرات مؤقتة وستزول عند اعادة تحميل الصفحة. اذا كنتم ترغبون
+          بتثبيت تغييرات التصميم بشكل نهائي على DHIS2 فيمكنكم تشغيل الأمر التالي
+          مع تغيير الأمر بمعلومات الدخول وعنوان تطبيق DHIS2 المراد تغييره:
+        </p>
+
+        <code>
+          curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl
+          --data-binary @- "https://url_to_dhis_2_instance/api/files/style" -H
+          "Content-Type:text/css" -u user:password
+        </code>
+
+        <p>
+          لمزيد من المعلومات اقرأ الـ
+          <a href="https://github.com/dhis2/dhis2-rtl-bookmarklet">README</a>
+          على صفحة المشروع.
+        </p>
+      </div>
+      <div>
+        <h1>المشاركة والاتصال بنا</h1>
+        <p>
+          اذا صادفتكم أي مشكلة بخصوص تنسيق الصفحات بالعربية من اليمين الى
+          اليسار، ولديكم تعديل للـCSS يمكنه حل هذه المشكلة، فيمكنكم مشاركة هذا
+          التعديل حتى تضم اضافته لل bookmarklet حتى يستفيد منه باقي المستخدمين.
+          لمشاركة تحديثاتكم، يمكنكم بدء Pull Request على رابط
+          <a href="https://github.com/dhis2/dhis2-rtl-bookmarklet">المشروع</a>.
+          ويمكنكم أيضا استخدام الرابط للاتصال بفريق DHIS2 عن طريق بدء نقاش
+          (GitHub Issues) على نفس الرابط.
+        </p>
+      </div>
+    </div>
   </div>
 
-
-  <div>
-      <ol style="list-style-position: inside;">
-        <li>Drag the link to your bookmarks bar</li>
-        <li>Then go to your DHIS2 instance -&gt; Data Entry App</li>
-        <li>Click the bookmarklet on your bookmarks</li>
-        <li>The rtl style should be applied!</li>
-      </ol>
-   </div>
-  
-  <div>
-    <video controls="controls" width="800" height="600" name="DHIS2 RTL Bookmarklet">
-      <source src="https://user-images.githubusercontent.com/1014725/199567071-2255240e-0c94-41ac-be3b-9020e1f42be3.mov">
+  <div id="walkthrough">
+    <video
+      controls="controls"
+      width="800"
+      height="600"
+      name="DHIS2 RTL Bookmarklet"
+    >
+      <source
+        src="https://user-images.githubusercontent.com/1014725/199567071-2255240e-0c94-41ac-be3b-9020e1f42be3.mov"
+      />
     </video>
   </div>
-</div>
+</body>
