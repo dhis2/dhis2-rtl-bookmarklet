@@ -96,6 +96,9 @@
     code {
       line-break: anywhere;
     }
+    code strong {
+      background-color: #ffff0070;
+    }
   </style>
 </head>
 <body style="text-align: center; gap: 20px; margin-top: 100px">
@@ -136,9 +139,8 @@
           RTL languages, and reflects better the paper forms in these languages.
         </p>
         <p>
-          The bookmarklet is a temporary solution as we work on supporting
-          right-to-left languages natively in DHIS2 core without the need for
-          any addons.
+          The bookmarklet is a temporary solution as we continue to improve
+          right-to-left support natively in DHIS2 without the need for addons.
         </p>
       </div>
       <div>
@@ -155,13 +157,17 @@
         <p>
           The fixes applied will be lost when you refresh the page. But if you
           are happy with the styles and want to apply them to your DHIS2
-          instance permanently, then you can run the following command:
+          instance permanently, then you can run the following command (changing
+          the highlighted values to match your DHIS2 instance):
         </p>
 
         <code>
           curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl
-          --data-binary @- "https://url_to_dhis_2_instance/api/files/style" -H
-          "Content-Type:text/css" -u user:password
+          --data-binary @-
+          <strong>"https://url_to_dhis_2_instance/api/files/style"</strong> -H
+          "Content-Type:text/css" -u <strong>user</strong>:<strong
+            >password</strong
+          >
         </code>
 
         <p>
@@ -230,13 +236,16 @@
           عند تفعيل الـbookmarklet، يمكنكم مشاهدة التغييرات مباشرة على الصفحة
           لكن هذه التغييرات مؤقتة وستزول عند اعادة تحميل الصفحة. اذا كنتم ترغبون
           بتثبيت تغييرات التصميم بشكل نهائي على DHIS2 فيمكنكم تشغيل الأمر التالي
-          مع تغيير الأمر بمعلومات الدخول وعنوان تطبيق DHIS2 المراد تغييره:
+          (مع تغيير القيم المشار إليها في الكود بمعلومات تطبيق DHIS2 الخاص بكم):
         </p>
 
         <code>
           curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl
-          --data-binary @- "https://url_to_dhis_2_instance/api/files/style" -H
-          "Content-Type:text/css" -u user:password
+          --data-binary @-
+          <strong>"https://url_to_dhis_2_instance/api/files/style"</strong> -H
+          "Content-Type:text/css" -u <strong>user</strong>:<strong
+            >password</strong
+          >
         </code>
 
         <p>
