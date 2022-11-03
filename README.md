@@ -1,15 +1,6 @@
-# dhis2-rtl
+# dhis2-rtl-bookmarklet
 
-These are instructions on how to improve the support for Right To Left for DHIS2 data entry app.
-
-## Use the styles fixes in this repo
-
-[style.css](./style.css) contains some fixes for RTL support for DHIS2 data entry app. To test these fixes, there is a bookmarklet that allow you to apply the styles on the fly without installing them on your system.
-
-
-| Before | After |
-| ---- | --- |
-| <img width="1612" alt="image" src="https://user-images.githubusercontent.com/1014725/199567025-d5943ec1-c18f-4182-9a2c-bb43fff6c72f.png"> | <img width="1599" alt="image" src="https://user-images.githubusercontent.com/1014725/199566895-59acef94-96c8-4966-a014-e2ee8cfa4b89.png"> |
+This bookmarklet improves support for right-to-left languages in DHIS2. For instructions on how to use it and install it, go to: https://dhis2.github.io/dhis2-rtl-bookmarklet/.
 
 ### Bookmarklet
 
@@ -25,6 +16,11 @@ curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl --data-bi
 
 
 https://user-images.githubusercontent.com/1014725/199788181-f6ecc26a-f4ec-4f47-ab57-d6c496973de1.mov
+
+
+| Before | After |
+| ---- | --- |
+| <img width="1612" alt="image" src="https://user-images.githubusercontent.com/1014725/199567025-d5943ec1-c18f-4182-9a2c-bb43fff6c72f.png"> | <img width="1599" alt="image" src="https://user-images.githubusercontent.com/1014725/199566895-59acef94-96c8-4966-a014-e2ee8cfa4b89.png"> |
 
 
 ## Add Your own styles
@@ -49,6 +45,6 @@ curl --data-binary @style.css "https://url_to_dhis_2_instance/api/files/style"  
 
 changing `url_to_dhis_2_instance`, `user` and `password` to the values from your DHIS2 instance.
 
-3. In the browser, go to `https://url_to_dhis_2_instance/api/files/style` and you should be able to see the CSS file you uploaded.
+3. In the browser, go to `https://url_to_dhis_2_instance/api/files/style` and you should be able to see the CSS file you just uploaded.
 
 4. Then go to a form, and do a hard refresh ("Empty cache and hard reload"  in Chrome), and the forms should then display right-to-left, with the styles applied to it. It's important to do a hard refresh, as otherwise the previous CSS will be cached and served instead.
