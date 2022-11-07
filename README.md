@@ -1,18 +1,6 @@
 # dhis2-rtl-bookmarklet
 
-This bookmarklet improves support for right-to-left languages in DHIS2. For instructions on how to use it and install it, go to: https://dhis2.github.io/dhis2-rtl-bookmarklet/.
-
-### Bookmarklet
-
-To install the bookmarklet, go to https://dhis2.github.io/dhis2-rtl-bookmarklet/ then drag the link to your Bookmarks Bar. Then you can go to your DHIS2 instance, and click on the bookmarkelt. This will apply the RTL fixes, but the changes will be lost when you refresh.
-
-
-If you are happy with the styles and want to apply them to your DHIS2 instance for all users, then you can run the following command:
-
-
-```bash
-curl -s https://dhis2.github.io/dhis2-rtl-bookmarklet/style.css | curl --data-binary @- "https://url_to_dhis_2_instance/api/files/style"  -H "Content-Type:text/css" -u user:password
-```
+This bookmarklet improves support for right-to-left languages in DHIS2. For instructions on how to use and install, go to: https://dhis2.github.io/dhis2-rtl-bookmarklet/.
 
 
 https://user-images.githubusercontent.com/1014725/199788181-f6ecc26a-f4ec-4f47-ab57-d6c496973de1.mov
