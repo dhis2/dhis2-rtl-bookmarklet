@@ -1,18 +1,18 @@
 
 /* core style changes needed for a semi-decent RTL experience */
-.formSection,
-.selectionBoxRow
+html[lang^=ar] .formSection,
+html[lang^=ar] .selectionBoxRow
 {
     direction: rtl;
 }
 
 
-#selectionBox {
+html[lang^=ar] #selectionBox {
     padding-right: 20px;
 }
 
 /* this selector works on chrome only, but didn't want a more intrusive selector that could affect other apps */ 
-.page:has(.formSection) {
+html[lang^=ar] .page:has(.formSection) {
     direction: rtl;
 }
 
@@ -22,7 +22,7 @@
     these are styles from the data entry app (https://github.com/dhis2/dhis2-core/blob/master/dhis-2/dhis-web/dhis-web-dataentry/src/main/webapp/dhis-web-dataentry/style/dhis-web-dataentry.css)
     converted using https://rtlcss.com/playground/#
 */
-#currentSelection
+html[lang^=ar] #currentSelection
 {
     padding: 6px;
     background-color: #eee;
@@ -38,26 +38,26 @@
     width: 400px; /* this is different from what LTR does but it's a work around for the fact that this component doesn't have a parent and if we change it to be on the right, then it takes the whole screen width */
 }
 
-#actions
+html[lang^=ar] #actions
 {
   float: left;
   width: 160px;
   text-align: left;
 }
 
-#closeCurrentSelection
+html[lang^=ar] #closeCurrentSelection
 {
   float:right;
   cursor:pointer;
   margin-left:5px;
 }
 
-.currentRow
+html[lang^=ar] .currentRow
 {
   padding-left: 50px;
 }
 
-.formSection td
+html[lang^=ar] .formSection td
 {
   padding-left: 1px;
   padding-right: 1px;
@@ -65,12 +65,12 @@
   white-space: nowrap;
 }
 
-.entryarea
+html[lang^=ar] .entryarea
 {
   text-align: right;
 }
 
-.commentlink
+html[lang^=ar] .commentlink
 {
   padding-right: 3px;
 }
@@ -78,30 +78,30 @@
 
 /* History audit table */
 
-#historyAuditTable
+html[lang^=ar] #historyAuditTable
 {
     text-align: right;
 }
 
 
-#historyAuditTable td, #historyAuditTable th
+html[lang^=ar] #historyAuditTable td, #historyAuditTable th
 {
     padding-right: 10px;
 }
 
 
-#historyTabs-chart
+html[lang^=ar] #historyTabs-chart
 {
     padding-right: 0;
 }
 
-.upload-progress-info
+html[lang^=ar] .upload-progress-info
 {
     right: 45%;
 }
 
 
-.upload-fileinfo-size
+html[lang^=ar] .upload-fileinfo-size
 {
     float: left;
     text-align: left;
@@ -110,7 +110,7 @@
     text-overflow: ellipsis;
 }
 
-.upload-button
+html[lang^=ar] .upload-button
 {
     margin: 1px 4px 2px 2px;
     height: 100%;
@@ -129,7 +129,7 @@
 } */
 
 
-#fileDeleteConfirmationDialog .fa
+html[lang^=ar] #fileDeleteConfirmationDialog .fa
 {
     margin-left: 5px;
 }
